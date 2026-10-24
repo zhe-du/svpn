@@ -1,0 +1,25 @@
+# 运行时数据：日志、缓存、探针结果、以及最重要的两个备份
+#   runtime/hosts.backup        = 你本机 hosts 的原始全文
+#   runtime/wininet-backup.json = 你接管前的系统代理设置（可能含内网地址）
+# 这些都属于「本机状态」，不属于源码，绝不提交。
+runtime/*
+!runtime/*.md
+
+# 本机配置：可能含上游账号密码，出厂只有占位符
+config.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp

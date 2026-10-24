@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "svpn"
+version = "1.1.0"
+description = "Steam 专用本地分流 / 加速器（纯标准库，零运行时依赖）"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: Internet :: Proxy Servers",
+]
+
+[project.scripts]
+svpn = "svpn.cli:main"
+
+[tool.setuptools]
+packages = ["svpn"]
+include-package-data = false
+
+[tool.setuptools.exclude-package-data]
+"*" = ["*.json", "*.md", "*.log", "*.pid", "*.pac", "*.pyc", "__pycache__/*"]

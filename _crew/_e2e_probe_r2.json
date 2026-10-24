@@ -1,0 +1,244 @@
+{
+  "ts": "2026-10-24 18:52:54",
+  "rounds": 10,
+  "target": "store.steampowered.com",
+  "socks": [
+    {
+      "code": 200,
+      "line": "HTTP/1.1 200 OK",
+      "ms": 935.1447999997617,
+      "ok": true,
+      "err": "",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 76.23020000028191,
+      "ok": false,
+      "err": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 60.67510000002585,
+      "ok": false,
+      "err": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 62.37120000014329,
+      "ok": false,
+      "err": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 63.15680000034263,
+      "ok": false,
+      "err": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+      "tls": ""
+    },
+    {
+      "code": 200,
+      "line": "HTTP/1.1 200 OK",
+      "ms": 550.8708999996088,
+      "ok": true,
+      "err": "",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 66.2464000001819,
+      "ok": false,
+      "err": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 65.97549999969488,
+      "ok": false,
+      "err": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 74.89579999992202,
+      "ok": false,
+      "err": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+      "tls": ""
+    },
+    {
+      "code": 200,
+      "line": "HTTP/1.1 200 OK",
+      "ms": 736.1452000000099,
+      "ok": true,
+      "err": "",
+      "tls": "TLSv1.3"
+    }
+  ],
+  "http": [
+    {
+      "code": 200,
+      "line": "HTTP/1.1 200 OK",
+      "ms": 491.7361000002529,
+      "ok": true,
+      "err": "",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 200,
+      "line": "HTTP/1.1 200 OK",
+      "ms": 470.1415999998062,
+      "ok": true,
+      "err": "",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 200,
+      "line": "HTTP/1.1 200 OK",
+      "ms": 508.71250000000146,
+      "ok": true,
+      "err": "",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 72.32879999992292,
+      "ok": false,
+      "err": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+      "tls": ""
+    },
+    {
+      "code": 200,
+      "line": "HTTP/1.1 200 OK",
+      "ms": 959.7969999999805,
+      "ok": true,
+      "err": "",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 64.04060000022582,
+      "ok": false,
+      "err": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+      "tls": ""
+    },
+    {
+      "code": 200,
+      "line": "HTTP/1.1 200 OK",
+      "ms": 469.17389999998704,
+      "ok": true,
+      "err": "",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 81.33150000003297,
+      "ok": false,
+      "err": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+      "tls": ""
+    },
+    {
+      "code": 200,
+      "line": "HTTP/1.1 200 OK",
+      "ms": 454.03459999988627,
+      "ok": true,
+      "err": "",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 64.34559999979683,
+      "ok": false,
+      "err": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+      "tls": ""
+    }
+  ],
+  "cdn": {
+    "code": 200,
+    "line": "HTTP/1.1 200 OK",
+    "ms": 237.93579999983194,
+    "ok": true,
+    "err": "",
+    "tls": "TLSv1.3"
+  },
+  "summary": {
+    "socks": {
+      "name": "socks5",
+      "rounds": 10,
+      "success": 3,
+      "rate": 0.3,
+      "p50_ms": 736.1,
+      "p95_ms": 935.1,
+      "min_ms": 60.7,
+      "max_ms": 935.1,
+      "codes": [
+        200,
+        0,
+        0,
+        0,
+        0,
+        200,
+        0,
+        0,
+        0,
+        200
+      ],
+      "tls": [
+        "TLSv1.3"
+      ],
+      "errs": [
+        "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+        "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+        "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+        "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+        "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+        "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+        "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)"
+      ]
+    },
+    "http": {
+      "name": "http",
+      "rounds": 10,
+      "success": 6,
+      "rate": 0.6,
+      "p50_ms": 470.1,
+      "p95_ms": 959.8,
+      "min_ms": 64.0,
+      "max_ms": 959.8,
+      "codes": [
+        200,
+        200,
+        200,
+        0,
+        200,
+        0,
+        200,
+        0,
+        200,
+        0
+      ],
+      "tls": [
+        "TLSv1.3"
+      ],
+      "errs": [
+        "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+        "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+        "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)",
+        "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)"
+      ]
+    }
+  }
+}

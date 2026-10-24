@@ -1,0 +1,252 @@
+{
+  "ts": "2026-10-24 18:45:52",
+  "rounds": 10,
+  "target": "store.steampowered.com",
+  "socks": [
+    {
+      "code": 0,
+      "line": "",
+      "ms": 15581.026300000303,
+      "ok": false,
+      "err": "TimeoutError: The read operation timed out",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 15193.7997,
+      "ok": false,
+      "err": "TimeoutError: The read operation timed out",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 15430.834899999809,
+      "ok": false,
+      "err": "TimeoutError: The read operation timed out",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 15432.0431000001,
+      "ok": false,
+      "err": "TimeoutError: The read operation timed out",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10016.348300000118,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10006.849500000044,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10005.76460000002,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10005.872499999896,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10001.566800000091,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10012.851699999828,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    }
+  ],
+  "http": [
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10001.632900000004,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10011.49439999972,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10001.852299999882,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10008.026900000004,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10016.306600000007,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10014.04679999996,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10005.467700000281,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 200,
+      "line": "HTTP/1.1 200 OK",
+      "ms": 7578.861299999971,
+      "ok": true,
+      "err": "",
+      "tls": "TLSv1.3"
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10037.994199999957,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    },
+    {
+      "code": 0,
+      "line": "",
+      "ms": 10026.252300000124,
+      "ok": false,
+      "err": "TimeoutError: timed out",
+      "tls": ""
+    }
+  ],
+  "cdn": {
+    "code": 200,
+    "line": "HTTP/1.1 200 OK",
+    "ms": 444.0952999998444,
+    "ok": true,
+    "err": "",
+    "tls": "TLSv1.3"
+  },
+  "summary": {
+    "socks": {
+      "name": "socks5",
+      "rounds": 10,
+      "success": 0,
+      "rate": 0.0,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "min_ms": 10001.6,
+      "max_ms": 15581.0,
+      "codes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tls": [
+        "TLSv1.3"
+      ],
+      "errs": [
+        "TimeoutError: The read operation timed out",
+        "TimeoutError: The read operation timed out",
+        "TimeoutError: The read operation timed out",
+        "TimeoutError: The read operation timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out"
+      ]
+    },
+    "http": {
+      "name": "http",
+      "rounds": 10,
+      "success": 1,
+      "rate": 0.1,
+      "p50_ms": 7578.9,
+      "p95_ms": 7578.9,
+      "min_ms": 7578.9,
+      "max_ms": 10038.0,
+      "codes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        200,
+        0,
+        0
+      ],
+      "tls": [
+        "TLSv1.3"
+      ],
+      "errs": [
+        "TimeoutError: timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out",
+        "TimeoutError: timed out"
+      ]
+    }
+  }
+}

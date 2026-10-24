@@ -1,0 +1,42 @@
+{
+  "listen_host": "127.0.0.1",
+  "listen_port": 7899,
+  "http_port": 7900,
+  "mode": "whitelist",
+  "connect_timeout": 12,
+  "auto_node": true,
+  "upstream": {
+    "kind": "socks5",
+    "host": "NODE_HOST",
+    "port": 1080,
+    "username": "",
+    "password": ""
+  },
+  "auth": {
+    "username": "",
+    "password": ""
+  },
+  "browser": {
+    "apply_system_proxy": true,
+    "use_pac": false,
+    "bypass": "<local>;localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;192.168.*;*.cn"
+  },
+  "cdn": {
+    "enabled": false,
+    "refresh_hours": 6,
+    "sni_port": 443,
+    "hosts": [
+      "steamcdn-a.akamaihd.net",
+      "cdn.akamai.steamstatic.com",
+      "client-update.akamai.steamstatic.com",
+      "shared.akamai.steamstatic.com",
+      "store.akamai.steamstatic.com",
+      "community.akamai.steamstatic.com",
+      "media.steampowered.com",
+      "avatars.steamstatic.com"
+    ]
+  },
+  "proxy_hosts": [],
+  "direct_hosts": [],
+  "_note": "本文件是配置的唯一 canonical 模板，键集与类型必须和 svpn/cli.py 的 DEFAULT_CONFIG 完全一致（tests/test_config_contract.py 守着）；所有 _ 开头的键（如本行）只作说明，load_config 加载时直接丢弃，不会进入运行配置。upstream.kind 可选 socks5 / http（host 填 127.0.0.1 就是你本机的 Clash / v2rayN / sing-box）；mode 可选 whitelist / all / blacklist。cdn.enabled=true 的真实行为是「启 SNI 透明转发」：svpn hosts apply 不写选边 IP，而是把 cdn.hosts 全部指向 127.0.0.1，由常驻的 svpn up 监听 cdn.sni_port（默认 443）按客户端 TLS SNI 拨到选边 IP —— 需要 svpn up 一直跑着，进程一停下载就走不了；cdn.enabled=false 则是老路子「hosts 直指选边 IP」，刷完 hosts 就生效、不用常驻进程。proxy_hosts / direct_hosts 是显式覆盖名单（分别代表「强制走节点」「强制直连」），优先于 svpn/rules.py 的内置 Steam 规则，空列表 = 不覆盖。"
+}
