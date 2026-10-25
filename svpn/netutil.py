@@ -75,6 +75,12 @@ def norm_host(host: str) -> str:
 # ---------------------------------------------------------------- DoH 解析
 _DNS_CACHE: dict[tuple[str, str], tuple[float, list[str], str]] = {}
 
+# 关键：DoH 必须绕开一切代理（含 Windows 系统代理）。
+# 否则 `svpn up --system-proxy` 之后，urllib 会读到 WinINET 里指向本机 7900 的代理，
+# 于是 DoH 请求绕回 svpn 自己 → 每条解析都卡到超时（实测 12s/域名，百度也打不开）。
+# 用 ProxyHandler({}) 的空 opener，等于无视环境变量与注册表里的代理设置。
+_NO_PROXY_OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+
 
 def _doh_query(url: str, name: str, rtype: str, timeout: float) -> list[str]:
     """向单个 DoH provider 要 A/AAAA 记录。
@@ -87,7 +93,7 @@ def _doh_query(url: str, name: str, rtype: str, timeout: float) -> list[str]:
     full = f"{url}{sep}name={name}&type={rtype}"
     req = urllib.request.Request(
         full, headers={"accept": "application/dns-json", "user-agent": UA})
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
+    with _NO_PROXY_OPENER.open(req, timeout=timeout) as resp:
         status = getattr(resp, "status", None)
         if status is None:
             status = getattr(resp, "code", 200)     # 老接口/假响应只有 code

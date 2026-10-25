@@ -224,7 +224,8 @@ class TestDohDegrade(unittest.TestCase):
             url = req.full_url if hasattr(req, "full_url") else str(req)
             return FakeResp(bad_body, bad_status) if "bad" in url else FakeResp(good)
 
-        with mock.patch("urllib.request.urlopen", side_effect=fake_urlopen), \
+        with mock.patch.object(netutil._NO_PROXY_OPENER, "open",
+                               side_effect=fake_urlopen), \
                 mock.patch.object(socket, "getaddrinfo",
                                   side_effect=AssertionError("DoH 能答就不该走系统解析")):
             return netutil.resolve("cdn.example", providers=self.P)
@@ -264,14 +265,14 @@ class TestDohDegrade(unittest.TestCase):
             "垃圾条目",                                     # 不是 dict
             {"type": 1, "data": "  5.6.7.8  "},            # 前后空白
         ]}).encode()
-        with mock.patch("urllib.request.urlopen",
-                        return_value=FakeResp(body)):
+        with mock.patch.object(netutil._NO_PROXY_OPENER, "open",
+                               return_value=FakeResp(body)):
             got = netutil._doh_query("https://x/dns-query", "cdn.example", "A", 1.0)
         self.assertEqual(got, ["1.2.3.4", "5.6.7.8"])
 
     def test_all_providers_broken_is_contained(self) -> None:
-        with mock.patch("urllib.request.urlopen",
-                        side_effect=OSError("DoH 全挂")), \
+        with mock.patch.object(netutil._NO_PROXY_OPENER, "open",
+                               side_effect=OSError("DoH 全挂")), \
                 mock.patch.object(socket, "getaddrinfo", side_effect=OSError("no dns")):
             self.assertEqual(netutil.resolve("cdn.example"), ([], "fail"))
             self.assertEqual(netutil.resolve_merged("cdn.example"), ([], "none"))
