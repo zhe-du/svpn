@@ -534,6 +534,17 @@ python tests/live_test.py                              # 真网：要先 python 
 
 架构与数据流见 **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**，Windows 踩坑见 **[docs/WINDOWS.md](docs/WINDOWS.md)**。
 
+## 另一个实现（C++）
+
+同一套 CLI 与配置格式的 Windows 原生实现：**[zhe-du/svpn-cpp](https://github.com/zhe-du/svpn-cpp)**
+
+- 单个 `svpn.exe`（约 1.6 MB），**零 DLL 依赖、不需要 Python 运行时**
+- TLS 走 SChannel，转发是线程 + `select`，不是 asyncio
+- **行为以本仓库为基准**，两者可互换 `config.json` 与 `runtime/cdn-cache.json`
+- 发布包在 [Releases](https://github.com/zhe-du/svpn-cpp/releases)
+
+取舍：C++ 版启动更快、分发更简单；Python 版改动更容易、调试更直观。按场景选。
+
 ---
 
 ## 声明
